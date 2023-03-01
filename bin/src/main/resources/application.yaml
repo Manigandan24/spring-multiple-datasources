@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+
+spring:
+  sql:
+   init:
+    mode: never
+  datasource:
+    primary:
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: post
+      driverClassName: org.postgresql.Driver
+    secondary:
+      url: jdbc:postgresql://localhost:5432/postgresdb
+      username: postgres
+      password: post
+      driverClassName: org.postgresql.Driver
+  #h2:
+    #console:
+      #enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-bean-definition-overriding: true
